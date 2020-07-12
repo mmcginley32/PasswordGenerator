@@ -9,10 +9,10 @@ function generatePassword() {
   let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz!?/&%$#@";
   passwordText.value = password;
   for(var i = 0; i<= complexity; i++) {
-    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.lenth - 1)))
+    password = password + values[Math.floor(Math.random() * values.length)]
   }
 
-  document.getElementById("generate").value = password;
+  document.getElementById("password").value = password;
 }
 
 
