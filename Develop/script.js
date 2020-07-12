@@ -2,14 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = "";
-  var passwordText = document.querySelector("#password");
-  var complexity =document.getElementById("slider").value;
-  var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz!?/&%$#@";
+function generatePassword() {
+  let complexity =document.getElementById("slider").value;
+  let password = "";
+  let passwordText = document.querySelector("#password");
+  let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz!?/&%$#@";
   passwordText.value = password;
   for(var i = 0; i<= complexity; i++) {
-    password = password + values.charAt(math.floor(math.random() * math.floor(values.lenth - 1)))
+    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.lenth - 1)))
   }
 
   document.getElementById("generate").value = password;
